@@ -1,0 +1,7 @@
+<h1>Welcome {{user.name}}</h1>
+<a href="/edit">Edit profile</a>
+<p>{{user.name}}</p>
+<p>{{user.email}}</p>
+{{#if user.isLaunderer}}
+<p>{{user.fee}}</p>
+{{/if}}

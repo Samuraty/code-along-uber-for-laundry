@@ -5,7 +5,7 @@
   <li> <a href="/logout"> Log Out </a> </li>
 </ul>
 
-
+{{#unless user.isLaunderer}}
 <h3> Want to become a launderer? </h3>
 
 <form action="/launderers" method="post">
@@ -16,3 +16,7 @@
 
   <button> Become a Launderer </button>
 </form>
+{{/unless}}
+{{#if user.isLaunderer}}
+<a href="/stopBeingLaunderer">Stop being a Launderer</a>
+{{/if}}
